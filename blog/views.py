@@ -8,6 +8,10 @@ from django.shortcuts import render, get_object_or_404
 from blog.models import Post, Category, Tag
 
 
+def entrance(request):
+    return render(request, 'entrance.html')
+
+
 def index(request):
     post_list = Post.objects.all()
     return render(request, 'blog/index.html', context={
