@@ -1,0 +1,55 @@
+.timeLine {
+    margin: 20px auto 0;
+    overflow: hidden;
+    position: relative
+}
+
+.timeLine li {
+    background: url(../img/back1.png) repeat-y 7.5px 0;
+    padding-bottom: 30px;
+    zoom: 1;
+    display: flex;
+}
+
+.timeLine li:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.timeLine li:last-child {
+    background: none !important;
+}
+
+.timeLine li .con {
+    background: url(../img/icon1.jpg) no-repeat 0 0;
+    width: 100%;
+    display: inline-block;
+    padding-left: 30px;
+}
+
+.timeLine li .con img {
+    max-width: 100%;
+}
+
+/* .on  */
+.timeLine li.on {
+    background: url(../img/back2.png) repeat-y 7.5px 0;
+}
+
+.timeLine li.on .con {
+    background: url(../img/icon2.jpg) no-repeat 0 0;
+    color: #1db702;
+}
+
+/* .on 下面的li  */
+.timeLine li.on ~ li {
+    background: url(../img/back3.png) repeat-y 7.5px 0;
+}
+
+.timeLine li.on ~ li .con {
+    background: url(../img/icon3.jpg) no-repeat 0 0;
+    color: #c3c3c3;
+}

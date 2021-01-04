@@ -105,17 +105,9 @@ img {
 
 #site-header {
     background-color: #FFF;
-    padding: 25px 20px;
-    margin-bottom: 40px;
+    padding: 15px 0;
+    margin-bottom: 0;
     border-bottom: 1px solid #e7e7e7;
-}
-
-.copyrights {
-    text-indent: -9999px;
-    height: 0;
-    line-height: 0;
-    font-size: 0;
-    overflow: hidden;
 }
 
 /**
@@ -137,6 +129,12 @@ img {
     font-weight: 300;
 }
 
+.description {
+    margin: 3px 0 0 0;
+    color: #999;
+    font-size: 13px;
+}
+
 /**
  * 3.2 - Main Navigation
  */
@@ -148,11 +146,11 @@ img {
 
 .main-nav a {
     color: #000000 !important;
-    padding: 0 0 5px 0 !important;
+    padding: 0 !important;
     margin-right: 30px;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
-    font-size: 24px;
+    font-size: 18px;
 }
 
 .main-nav a:active,
@@ -209,43 +207,56 @@ img {
  * 4.0 - Home/Blog
  */
 
+.main-content {
+    border-right: 1px solid #eee;
+}
+
 .content-body {
     padding-bottom: 4em;
 }
 
 .post {
     background: #fff;
-    padding: 30px 30px 0;
+    margin: 2px 40px 0 0;
+    border-bottom: 1px solid #eee;
 }
 
 .entry-title {
-    text-align: center;
+    text-align: left;
     font-size: 1.9em;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     line-height: 1.6;
-    padding: 10px 20px 0;
+    padding-top: 10px;
 }
 
 .entry-meta {
-    text-align: center;
+    text-align: left;
     color: #DDDDDD;
     font-size: 13px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .entry-content {
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1.9;
     font-weight: 300;
     color: #000;
 }
 
 .post-category::after,
-.post-date::after,
 .post-author::after,
 .comments-link::after {
     content: ' ·';
     color: #000;
+}
+
+.post-date::after {
+    content: ' |';
+    color: #2c80c5;
+}
+
+.post-date a {
+    color: #999999;
 }
 
 /**
@@ -257,78 +268,33 @@ img {
     font-weight: 400;
     word-spacing: 1px;
     letter-spacing: 0.01em;
-    text-align: center;
-    margin-top: 20px;
+    text-align: right;
+    margin-top: 5px;
 }
 
 .cl-effect-14 a {
-    padding: 0 20px;
+    padding: 5px 20px;
     height: 45px;
     line-height: 45px;
+    text-decoration: none;
     position: relative;
-    display: inline-block;
-    margin: 15px 25px;
-    letter-spacing: 1px;
-    font-weight: 400;
-    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+    transform: translate(-50%,-50%);
 }
 
-.cl-effect-14 a::before,
-.cl-effect-14 a::after {
+.cl-effect-14 a::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #9ec8da;
     position: absolute;
-    width: 45px;
-    height: 1px;
-    background: #C3C3C3;
-    content: '';
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-    pointer-events: none;
-}
-
-.cl-effect-14 a::before {
-    top: 0;
-    left: 0;
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    transform: rotate(90deg);
-    -webkit-transform-origin: 0 0;
-    -moz-transform-origin: 0 0;
-    transform-origin: 0 0;
-}
-
-.cl-effect-14 a::after {
-    right: 0;
-    bottom: 0;
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    transform: rotate(90deg);
-    -webkit-transform-origin: 100% 0;
-    -moz-transform-origin: 100% 0;
-    transform-origin: 100% 0;
-}
-
-.cl-effect-14 a:hover::before,
-.cl-effect-14 a:hover::after,
-.cl-effect-14 a:focus::before,
-.cl-effect-14 a:focus::after {
-    background: #000;
-}
-
-.cl-effect-14 a:hover::before,
-.cl-effect-14 a:focus::before {
+    top: 100%;
     left: 50%;
-    -webkit-transform: rotate(0deg) translateX(-50%);
-    -moz-transform: rotate(0deg) translateX(-50%);
-    transform: rotate(0deg) translateX(-50%);
+    transition: all .5s;
 }
 
-.cl-effect-14 a:hover::after,
-.cl-effect-14 a:focus::after {
-    right: 50%;
-    -webkit-transform: rotate(0deg) translateX(50%);
-    -moz-transform: rotate(0deg) translateX(50%);
-    transform: rotate(0deg) translateX(50%);
+.cl-effect-14 a:hover:after{
+    left: 0;
+    width: 100%;
 }
 
 /**
@@ -346,6 +312,7 @@ img {
     line-height: 1.6;
     padding: 10px 0 0;
     font-weight: 400;
+    border-bottom: 1px solid #eee;
 }
 
 .widget-recent-posts ul {
@@ -650,7 +617,7 @@ img {
 }
 
 .social li a {
-    border: 1px solid #888;
+    /*border: 1px solid #888;*/
     font-size: 22px;
     color: #888;
     transition: all 0.3s ease-in;
@@ -661,20 +628,8 @@ img {
     color: #fff;
 }
 
-.facebook a {
-    padding: 12px 21px;
-}
-
-.twitter a {
-    padding: 12px 15px;
-}
-
-.google-plus a {
-    padding: 12px 15px;
-}
-
-.tumblr a {
-    padding: 12px 20px;
+.social li {
+    padding: 0 15px;
 }
 
 /**

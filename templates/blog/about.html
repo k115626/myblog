@@ -1,0 +1,29 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% block main %}
+    <div class="content-body">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-12">
+                    <h1 class="page-title">About Me</h1>
+                    <article class="post">
+                        <div class="entry-content clearfix">
+                            <figure class="img-responsive-center">
+                                <img class="img-responsive" src="{% static 'blog/img/me.jpg' %}" alt="Developer Image" style="width: 50%">
+                            </figure>
+                            <p>This is 吧啦吧啦吧啦吧啦吧啦吧啦 一大段.</p>
+                            <div class="height-40px"></div>
+                            <h2 class="title text-center">Social</h2>
+                            <ul class="social">
+                                <li><a href="#"><span class="ion-social-github"></span></a></li>
+                                <li><a href="#"><span class="ion-chatbubbles"></span></a></li>
+                                <li><a href="#"><span class="ion-social-googleplus"></span></a></li>
+                                <li><a href="#"><span class="ion-social-whatsapp"></span></a></li>
+                            </ul>
+                        </div>
+                    </article>
+                </main>
+            </div>
+        </div>
+    </div>
+{% endblock %}
