@@ -858,3 +858,28 @@ img {
 .current a {
     color: red;
 }
+
+/**
+ * 14.0 - go top
+ */
+
+.actGotop {
+    position:fixed;
+    _position:absolute;
+    bottom:80px;
+    right:80px;
+    display:none;
+    font-size: 4rem;
+}
+
+.actGotop span {
+    color: #797979;
+}
+
+.actGotop span:hover {
+    color: #183a65;
+}
+
+.actGotop a:hover {
+    outline:none;
+}
